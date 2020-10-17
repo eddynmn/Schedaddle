@@ -2,4 +2,4 @@ venv
 __pycache__
 *.swp
 *.swo
-
+node_modules
