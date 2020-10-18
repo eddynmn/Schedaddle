@@ -1,5 +1,5 @@
 import time
-from flask import Flask, render_template
+from flask import Flask, render_template, request
 
 app = Flask(__name__)
 
@@ -9,4 +9,10 @@ def get_current_time():
 
 @app.route('/hello')
 def hello():
-    return {"data": "Hello World"}
+    return {"data": "Goodbye World!!"}
+
+@app.route('/schedule', methods=['POST','GET'])
+def foundScheule():
+    if request.method == 'POST':
+        a = request.json
+        return{"data": a[::-1]}
