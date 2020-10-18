@@ -8,7 +8,7 @@
          <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500&display=swap" rel="stylesheet">
   </head>
    
-  <button id="myBtn">Add Task +</button>
+  <button id="myBtn" onclick="showModal()">Add Task +</button>
 
   <div id="myModal" class="modal">
     <div class="modal-content">
@@ -48,28 +48,6 @@
     </form>
     <button type="button" id="submitButton" onclick="sendInfo1()">Submit</button>
   </div>
-
-   <!--<body>
-      <input type ="button" onclick = "sayHello()" value = "Say Hello" />
-      <h1 id="btnInput"></h1>
-   </body>-->
-  <script>
-    var modal = document.getElementById("myModal");
-    var btn = document.getElementById("myBtn");
-    var span = document.getElementsByClassName("close")[0];
-    btn.onclick = function() {
-      modal.style.display = "block";
-      span.onclick = function() {
-        modal.style.display = "none";
-        window.onclick = function(event) {
-          if (event.target == modal) {
-            modal.style.display = "none";
-          }
-        }
-      }
-    }
-  </script>
-
 
 </div>
 

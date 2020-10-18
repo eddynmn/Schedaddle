@@ -13,11 +13,13 @@ def schedule():
         data = request.json
         returnValue = False;
         if "type" in data.keys():
+            print("HI")
             if data["type"] == "fixed":
-                return addEvent(data)
-                print("NEW FIXED EVENT")
+                status = addEvent(data, "fixed")
+                return {"status":status}
             if data["type"] == "flex":
-                print("NEW FLEX EVENT")
+                status = addEvent(data, "flex")
+                return {"status":status}
         else:
             return {"Error":"NO DATA TYPE"}
 
@@ -28,7 +30,6 @@ def schedule():
             return {"Schedule": schedule}
         else:
             return {"Info": "NO SCHEDULE FOR THAT DATA"}
-        return{}
 
 def getSchedule(date):
     return [{"name":"testEvent", 
@@ -42,8 +43,9 @@ def getSchedule(date):
         "endTime":1130}]
 
 def addEvent(event, type):
+    print("HELLO")
     if type == "fixed":
         fr.addEventToFile('fixedEvents.json', event)
     elif type == "flex":
         fr.addEventToFile('flexEvents.json', event)
-    return "Item Added"
+    return "Success"
