@@ -14,10 +14,12 @@ def schedule():
         returnValue = False;
         if "type" in data.keys():
             if data["type"] == "fixed":
-                return addEvent(data)
                 print("NEW FIXED EVENT")
+                return addEvent(data, "fixed")
+               
             if data["type"] == "flex":
                 print("NEW FLEX EVENT")
+                return addEvent(data, "fixed")
         else:
             return {"Error":"NO DATA TYPE"}
 
