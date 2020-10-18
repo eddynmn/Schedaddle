@@ -1,0 +1,108 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: #ddd;
+  display: inline-flex;
+}
+
+/* formatting for each task box */
+.container {
+  display: block;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  margin-top: 1rem;
+}
+
+/* morning schedule */
+.scheduleBoxL {
+  background-color: #e67b24;
+  height: 750px;
+  width: 750px;
+  margin-left: 40px;
+  margin-top: 60px;
+  border-radius: 0px 50px 0px 50px;
+}
+
+/* afternoon schedule */
+.scheduleBoxR {
+  background-color: rgb(47, 140, 172);
+  height: 750px;
+  width: 750px;
+  margin-left: 100px;
+  margin-top: 60px;
+  border-radius: 50px 0px 50px 0px;
+}
+
+/* box titles */
+h1 {
+  color: white;
+  font-family: "Montserrat", sans-serif;
+  font-size: 50px;
+  padding-top: 30px;
+  padding-left: 50px;
+  padding-bottom: 20px;
+}
+
+/* due dates and times */
+.dd {
+  color: white;
+  font-family: "Montserrat", sans-serif;
+  font-size: 14px;
+  text-align: right;
+  margin-top: -2.7rem;
+  margin-right: 3.5rem;
+}
+
+/* fixed tasks for the morning */
+.fixed1 {
+  color: white;
+  font-family: "Montserrat", sans-serif;
+  font-size: 20px;
+  background-color: #d86202;
+  border-radius: 7px;
+  width: 675px;
+  height: 50px;
+  padding-left: 15px;
+}
+
+/* fixed tasks for the afternoon */
+.fixed2 {
+  color: white;
+  font-family: "Montserrat", sans-serif;
+  font-size: 20px;
+  background-color: rgb(27, 97, 121);
+  border-radius: 7px;
+  width: 675px;
+  height: 50px;
+  padding-left: 15px;
+}
+
+/* flexible tasks for the morning */
+.flex1 {
+  color: white;
+  font-family: "Montserrat", sans-serif;
+  font-size: 20px;
+  background-color: #f58d39;
+  border-radius: 7px;
+  width: 675px;
+  height: 50px;
+  padding-left: 15px;
+}
+
+/* flexible tasks for the afternoon */
+.flex2 {
+  color: white;
+  font-family: "Montserrat", sans-serif;
+  font-size: 20px;
+  background-color: rgb(93, 180, 209);
+  border-radius: 7px;
+  width: 675px;
+  height: 50px;
+  padding-left: 15px;
+}
