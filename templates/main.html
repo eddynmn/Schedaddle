@@ -2,75 +2,85 @@
 <html>
 
   <head>
-         <title>Schedadle</title>
-         <script type = "text/javascript" src = "/static/js/main.js" ></script>
-         <link rel="stylesheet" href="/static/css/main.css">
+         <title>Schedaddle!</title>
+         <meta charset="UTF-8" />
+         <link rel="stylesheet" href="/static/css/style.css">
          <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500&display=swap" rel="stylesheet">
   </head>
-   
-  <button id="myBtn">Add Task +</button>
-
-  <div id="myModal" class="modal">
-    <div class="modal-content">
-      <span class="close">&times;</span>
+  
+  <body>
+  
+    <div class="scheduleBoxL">
+      <h1>Morning</h1>
+      <div class="container"></div>
     </div>
 
-  <div class="tasks">
-      <h1>Add a task</h1>
-      <h2>What type of task?</h2>
-      <button type="button" id="fixed" onClick="toggleText1()">Fixed</button>
-      <button type="button" id="variable" onClick="toggleText()">Variable</button>
+    <button id="myBtn">Add Task +</button>
 
-  <div id="appear"  style="display: none;">
-    <form>
-        Name of task: <input type="text" id="name"><br>
-        Deadline: <input type="date" id="deadline"> <input type="time" id="time"><br>
-    </form>
-    <form>
-      <label for="browser">Time for task:</label>
-      <input list="browsers" name="browser" id="length">
-      <datalist>
-        <option value=".5">
-        <option value="1">
-        <option value="1.5">
-        <option value="2">
-        <option value="2.5">
-      </datalist>
-    </form>
-    <button type="button" id="submitButton" onclick="sendInfo()">Submit</button>
-  </div>
+    <div class="scheduleBoxR">
+      <h1>Afternoon</h1>
+      <div class="container"></div>
+    </div>
 
-  <div id="appear1" style="display: none;">
-    <form>
-      Name of task: <input type="text" id="name1"><br>
-      Start time: <input type="time" id="start"><br>
-      End time: <input type="time" id="end"><br>
-    </form>
-    <button type="button" id="submitButton" onclick="sendInfo1()">Submit</button>
-  </div>
+    <div id="myModal" class="modal">
+      <div class="modal-content">
+        <span class="close">&times;</span>
+      </div>
 
-   <!--<body>
-      <input type ="button" onclick = "sayHello()" value = "Say Hello" />
-      <h1 id="btnInput"></h1>
-   </body>-->
-  <script>
-    var modal = document.getElementById("myModal");
-    var btn = document.getElementById("myBtn");
-    var span = document.getElementsByClassName("close")[0];
-    btn.onclick = function() {
-      modal.style.display = "block";
-      span.onclick = function() {
-        modal.style.display = "none";
-        window.onclick = function(event) {
-          if (event.target == modal) {
+      <div class="tasks">
+        <h1>Add a task</h1>
+        <h2>What type of task?</h2>
+        <button type="button" id="fixed" onClick="toggleText1()">Fixed</button>
+        <button type="button" id="variable" onClick="toggleText()">Variable</button>
+
+      <div id="appear" style="display: none">
+        <form>
+          Name of task: <input type="text" id="name"><br>
+          Deadline: <input type="date" id="deadline"> <input type="time" id="time"><br>
+        </form>
+        <form>
+          <label>Time for task:</label>
+          <input id="length">
+            <datalist>
+              <option value=".5">
+              <option value="1">
+              <option value="1.5">
+              <option value="2">
+              <option value="2.5">
+            </datalist>
+        </form>
+        <button type="button" id="submitButton" onclick="sendInfo()">Submit</button>
+      </div>
+
+      <div id="appear1" style="display: none;">
+        <form>
+          Name of Task: <input type="text" id="name1"><br>
+          Start Time: <input type="time" id="start"><br>
+          End Time: <input type="time" id="end"><br>
+        </form>
+        <button type="button" id="submitButton" onclick="sendInfo1()">Submit</button>
+      </div>
+
+      <script>
+        var modal = document.getElementById("myModal");
+        var btn = document.getElementById("myBtn");
+        var span = document.getElementsByClassName("close")[0];
+        btn.onclick = function() {
+          modal.style.display = "block";
+          span.onclick = function() {
             modal.style.display = "none";
+            window.onclick = function(event) {
+              if (event.target == modal) {
+                modal.style.display = "none";
+              }
+            }
           }
         }
-      }
-    }
-  </script>
+      </script>
 
+      <script type = "text/javascript" src = "/static/js/main_joff.js" ></script>
 
-</div>
-
+      <script type = "text/javascript" src = "/static/js/main_eggo.js" ></script>
+    </div>
+  </body>
 </html>
